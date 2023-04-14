@@ -6,9 +6,9 @@ from datetime import datetime
 
 class PatientDataBase(BaseModel):
     id: int
-    tstamp_base = datetime
-    ts_offset_seconds = str
-    data = str
+    tstamp_base: datetime
+    ts_offset_seconds: str
+    data: str
     
     class Config:
         orm_mode = True
