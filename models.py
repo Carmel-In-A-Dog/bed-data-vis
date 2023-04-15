@@ -1,9 +1,8 @@
 from sqlalchemy import Column, Integer, String
 
-# from .database import Base #grabs base class made in database.py
-import database 
+import dal 
 
-class PatientData(database.Base):
+class PatientData(dal.Base):
     __tablename__ = "bed_raw_3054_only"
     
     es_id = Column(Integer, primary_key=True, index=True)
@@ -12,4 +11,4 @@ class PatientData(database.Base):
     data = Column(String, index=True)
 
   
-database.Base.metadata.create_all(bind=database.engine)
+dal.Base.metadata.create_all(bind=dal.engine)
